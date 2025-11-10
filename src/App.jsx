@@ -25,13 +25,17 @@ function App() {
   const [article, setArticle] = useState(articles)
   const [newArticle, setNewArticle] = useState('')
 
+  function handleSubmit(e) {
+    e.preventDefault()
+  }
+
   return (
     <>
       <div className="container mt-3">
         <div className="col-6 mx-auto">
           <h1 className="display-6 mb-3">Ultimi articoli su React</h1>
           <div className="card p-4">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="input-group mb-3">
                 <input type="text" className="form-control" placeholder="new article" aria-label="new article"
                   aria-describedby="add-article" value={newArticle} onChange={(e) => setNewArticle(e.target.value)} />
