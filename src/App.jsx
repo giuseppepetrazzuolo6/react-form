@@ -23,13 +23,18 @@ function App() {
     }
   ];
 
-
   return (
     <>
-      <div className="container">
+      <div className="container mt-3">
         <div className="col-6 mx-auto">
-          <h1 className="display-6">Ultimi articoli su React</h1>
-          <div className="card">
+          <h1 className="display-6 mb-3">Ultimi articoli su React</h1>
+          <div className="card p-4">
+            <form>
+              <div className="input-group mb-3">
+                <input type="text" className="form-control" placeholder="new article" aria-label="new article" aria-describedby="add-article" />
+                <button className="btn btn-outline-secondary" type="submit" id="add-article">Add</button>
+              </div>
+            </form>
             <ul className="list-group">
               {
                 articles.map(item =>
