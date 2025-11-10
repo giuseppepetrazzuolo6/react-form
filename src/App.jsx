@@ -1,5 +1,5 @@
+import { useState } from "react";
 function App() {
-
   const articles = [
     {
       id: 1,
@@ -22,6 +22,7 @@ function App() {
       title: "React Router: creare una SPA completa"
     }
   ];
+  const [article, setArticle] = useState(articles)
 
   return (
     <>
@@ -37,7 +38,7 @@ function App() {
             </form>
             <ul className="list-group">
               {
-                articles.map(item =>
+                article.map(item =>
                   <li className="list-group-item d-flex justify-content-between align-items-center" key={item.id}>
                     {item.title}
                     <button className="btn btn-success">Read</button>
