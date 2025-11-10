@@ -27,6 +27,14 @@ function App() {
 
   function handleSubmit(e) {
     e.preventDefault()
+
+    const newArticleObj = {
+      id: Date.now(),
+      title: newArticle
+    }
+
+    setArticle([newArticleObj, ...article])
+    setNewArticle('')
   }
 
   return (
