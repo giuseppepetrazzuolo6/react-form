@@ -30,19 +30,16 @@ function App() {
         <div className="col-6 mx-auto">
           <h1 className="display-6">Ultimi articoli su React</h1>
           <div className="card">
-            <ul class="list-group">
+            <ul className="list-group">
               {
                 articles.map(item =>
-                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <li className="list-group-item d-flex justify-content-between align-items-center" key={item.id}>
                     {item.title}
                     <button className="btn btn-success">Read</button>
                   </li>
                 )
-
               }
-
             </ul>
-
           </div>
         </div>
       </div>
