@@ -23,6 +23,7 @@ function App() {
     }
   ];
   const [article, setArticle] = useState(articles)
+  const [newArticle, setNewArticle] = useState('')
 
   return (
     <>
@@ -32,7 +33,8 @@ function App() {
           <div className="card p-4">
             <form>
               <div className="input-group mb-3">
-                <input type="text" className="form-control" placeholder="new article" aria-label="new article" aria-describedby="add-article" />
+                <input type="text" className="form-control" placeholder="new article" aria-label="new article"
+                  aria-describedby="add-article" value={newArticle} onChange={(e) => setNewArticle(e.target.value)} />
                 <button className="btn btn-outline-secondary" type="submit" id="add-article">Add</button>
               </div>
             </form>
